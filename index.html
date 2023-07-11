@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/logo.png" class="logo" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa fa-remove" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa fa-reorder"  onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hello , I am <span>Satyam Gupta</span></h1>
+                <p>I'm a student at NIT Warangal.</p>
+            </div>
+        </div>
+    </div>
+<!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/satyam-bg.png" alt="image1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Welcome to my portfolio website! I'm a student at National Institute of Technology Warangal.I'm from Khargone (M.P.).</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <!-- <p class="tab-links " onclick="openTab('experience')">Experience</p> -->
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab " id="skills">
+                        <ul>
+                            <li><span>Languages: </span><br>C C++ Java JavaSrcipt PHP SQL R</li>
+                            <li><span>Web: </span><br>HTML CSS</li>
+                            <li><span>Tools:</span><br>Git GitHub</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App</li>
+                            <li><span>Web Dev</span><br>Designing Web/App</li>
+                            <li><span>UI?UX</span><br>Designing Web/App</li>
+                        </ul>
+                    </div> -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>National Institute Of Technology Warangal</span><br>Master Of Computer Application (MCA) <br>CGPA: 7.56 (2023-25)</li>
+                            <li><span>IPS Academy, Indore</span><br>Bachelor's Of Computer Application (BCA)<br>Percentage: 72.9 (2018-21)</li>
+                            <li><span>Board Of Secondary Education, Bhopal</span><br>PCM<br>Percentage: 80.4 (2017-18)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------Service ------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Hello, if you are looking for a web designer/devloper feel free to contact.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <h2>Problem Solving</h2>
+                    <p>I'm at intermidiate level of problem solving</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <h2>Coding</h2>
+                    <p>I can code clean and understable ans reusable in C C++Java </p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/pet-portal1.png" alt="">
+                    <img src="img/pet-portal2.png" alt="">
+                    <div class="layer">
+                        <h3>Pet-Portal</h3>
+                        <p>This is a Frontend Project,which aware people to adopt pets.</p>
+                        <a href="https://satyamg111.github.io/Pet-Portal"><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>this is description</p>
+                        <a href=""><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>this is description</p>
+                        <a href=""><i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa fa-envelope"></i> satyam97102@gmail.com</p>
+                    <p><i class="fa fa-phone"></i> +91 7610397102</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-github"></i></a>
+                    </div>
+                    <!-- <a href="#" download></a> -->
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea name="Massage" rows="6" placeholder="Your massage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!----------------JavaScript ---------------->
+<script>
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+
+    function openTab(tabName){
+        for(tabLink of tabLinks){
+            tabLink.classList.remove("active-link")
+        }
+        for (tabContent of tabContents) {
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var menubar = document.getElementById("sidemenu");
+
+    function openmenu(){
+        menubar.style.right = "0";
+    }
+
+    function closemenu() {
+            menubar.style.right = "-200px";
+    }
+    
+</script>
+</body>
+</html>
+
+
+<!-- continue from 01:40:00 -->
