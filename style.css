@@ -23,11 +23,11 @@ span{
     height: 100vh;
     background-image: url("img/satyam--.png");
     background-size: cover;
-    background-position: center;
+    background-position: center; 
     border-radius: 30%;
 }
 .container{
-    padding: 10px 5%;
+    padding: 10px 2%;
 }
 nav {
     /* background-color: rgba(252, 197, 214, 0.329); */
@@ -52,6 +52,10 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position:relative;
+}
+nav ul li .fa{
+    font-size: 24px;
+    padding: 0 5px;
 }
 nav ul li a::after {
     content: '';
@@ -132,7 +136,7 @@ nav ul li a:hover::after {
 }
 .tab-contents ul li span{
     color: #b54769;
-    font-size: 14px;
+    font-size: 18px;
 }
 .tab-contents{
     display: none;
@@ -140,6 +144,7 @@ nav ul li a:hover::after {
 .tab-contents.active-tab{
     display: block;
 }
+
 .skill-icons .skill-icons-list{
     display: flex;
     /* justify-content: space-around; */
@@ -272,6 +277,12 @@ nav ul li a:hover::after {
     color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
+    transition: filter .1s;
+    transition: transform .5s;
+}
+.contact-left p i:hover{
+    filter: drop-shadow(0 0 10px #ff004f);
+    transform: scale(1.2);
 }
 .social-media{
     margin-top: 30px;
@@ -335,21 +346,29 @@ form .btn2{
 
 
 /* <--------- For small screen------------> */
-nav .fa{
+/* nav .fa{
+    display: none;
+} */
+.nav-oc{
     display: none;
 }
 @media only screen and (max-width:600px){
     #header{
-        /* background-image: url(""); enter small image */
+        background-image: url("img/satyam--.png");
+        background-size: 120%, auto, contain;
+        background-repeat: no-repeat;
+        background-position: -50px 50px;
+        height: fit-content;
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
+        margin-bottom: auto;
         font-size: 16px;
     }
     .header-text h1{
         font-size: 30px;
     }
-    nav .fa {
+    nav  .nav-oc {
         display: block;
         font-size: 25px;
     }
@@ -368,11 +387,52 @@ nav .fa{
         display: block;
         margin: 25px;
     }
-    nav ul .fa{
+    nav ul  .nav-oc{
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
-
+    #about .about-col-1{
+        width: 0;
+        display: none;
+    }
+    #about .row {
+           display: block;
+    }
+    #about .about-col-2 {
+        width: 100%;
+    }
+    .about-col-2 .sub-title{
+        text-align: center;
+    }
+    .about-col-2 p{
+        text-align: center;
+        font-size: 18px;
+    }
+    #services .container{
+        margin: 10px 0;
+    }
+    #services .services-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #services .sub-title{
+        width: 100%;
+        text-align: center;
+    }
+    #contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-left .sub-title{
+        width: 100%;
+        text-align: center;
+    }
+    .contact-right .btn{
+        /* float: right; */
+        display: block;
+        margin: 0 auto;
+    }
 }
