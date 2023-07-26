@@ -160,12 +160,12 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa fa-envelope"></i> satyam97102@gmail.com</p>
-                    <p><i class="fa fa-phone"></i> +91 7610397102</p>
+                    <a href="mailto:satyam97102@gmail.com"><p><i class="fa fa-envelope"></i> satyam97102@gmail.com</p></a>
+                    <a href="tel:7610397102"><p><i class="fa fa-phone"></i> +91 7610397102</p></a>
                     <div class="social-media">
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href=""><i class="fa fa-github"></i></a>
+                        <a href="https://www.instagram.com/its_s_guptaji/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-github"></i></a>
                     </div>
                     <!-- <a href="#" download></a> -->
                 </div>
@@ -182,33 +182,34 @@
     </div>
 
         <!----------------JavaScript ---------------->
+
 <script>
-    var tabLinks = document.getElementsByClassName("tab-links");
-    var tabContents = document.getElementsByClassName("tab-contents");
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
 
-    function openTab(tabName){
-        for(tabLink of tabLinks){
-            tabLink.classList.remove("active-link")
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link")
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
         }
-        for (tabContent of tabContents) {
-            tabContent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabName).classList.add("active-tab");
-    }
+
+        
 </script>
-
 <script>
     var menubar = document.getElementById("sidemenu");
 
-    function openmenu(){
-        menubar.style.right = "0";
-    }
+        function openmenu() {
+            menubar.style.right = "0";
+        }
 
-    function closemenu() {
+        function closemenu() {
             menubar.style.right = "-200px";
-    }
-    
+        }
 </script>
 </body>
 </html>
