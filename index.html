@@ -9,32 +9,44 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div id="header">
+    <div id="navigation" class="">
         <div class="container">
-            <nav>
+            <nav class="navbar">
                 <img src="img/logo.png" class="logo" alt="">
                 <ul id="sidemenu">
                     <li><i class="fa fa-home"></i><a href="#header" onclick="closemenu()">Home</a></li>
                     <li><i class="fa fa-id-badge"></i><a href="#about" onclick="closemenu()">About</a></li>
                     <li><i class="fa fa-handshake-o"></i><a href="#services" onclick="closemenu()">Services</a></li>
-                    <!-- <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li> -->
+                    <li><a href="#portfolio" onclick="closemenu()">Projects </a></li>
                     <li><i class="fa fa-user-o"></i><a href="#contact" onclick="closemenu()">Contact</a></li>
                     <i class="fa fa-remove nav-oc" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa fa-reorder nav-oc"  onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <h1>Hello , I am <span>Satyam Gupta</span></h1>
-                <p>I'm a student at NIT Warangal.</p>
+        </div>
+    </div>
+    <div id="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="header-text">
+                    <p>Hello , I am </p>
+                    <h1>Satyam<span> Gupta</span></h1>
+                    <!-- <p>I'm a student at NIT Warangal.</p> -->
+                    <p class="spin">I'm a <span id="spin">Programer</span></p>
+                </div>
+                <div class="header-img">
+                    <img class="back-img" src="./img/satyam-bg-.png" alt="">
+                </div>
             </div>
         </div>
     </div>
+
 <!-- About -->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="img/satyam-bg.png" alt="image1">
+                    <img src="img/1703749207349.jpg" alt="image1">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -76,6 +88,9 @@
                                 </ul>
                             </li>
                         </ul>
+                        <div class="about-cv">
+                            <a href="./Satyam_resume.pdf" target="_blank" download="">Download CV</a>
+                        </div>
                     </div>
                     <!-- <div class="tab-contents" id="experience">
                         <ul>
@@ -86,7 +101,7 @@
                     </div> -->
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>National Institute Of Technology Warangal</span><br>Master Of Computer Application (MCA) <br>CGPA: 7.56 (2023-25)</li>
+                            <li><span>National Institute Of Technology Warangal</span><br>Master Of Computer Application (MCA) <br>CGPA: 7.54 (2023-25)</li>
                             <li><span>IPS Academy, Indore</span><br>Bachelor's Of Computer Application (BCA)<br>Percentage: 72.9 (2018-21)</li>
                             <li><span>Board Of Secondary Education, Bhopal</span><br>PCM<br>Percentage: 80.4 (2017-18)</li>
                         </ul>
@@ -121,7 +136,7 @@
         </div>
     </div>
 
-    <!-- <div id="portfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
@@ -130,29 +145,30 @@
                     <img src="img/pet-portal2.png" alt="">
                     <div class="layer">
                         <h3>Pet-Portal</h3>
-                        <p>This is a Frontend Project,which aware people to adopt pets.</p>
+                        <p>This project provides awareness and motivate peoples about pets adoption.</p>
                         <a href="https://satyamg111.github.io/Pet-Portal"><i class="fa fa-external-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="img/logo.png" alt="">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>this is description</p>
-                        <a href=""><i class="fa fa-external-link"></i></a>
+                        <h3>Store Management</h3>
+                        <p>Developed a user-friendly Grocery Store Management System in C++, incorporating Berkeley DB for efficient data storage.</p>
+                        <a href="https://github.com/Satyamg111/Store_management.git"><i class="fa fa-external-link"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <!-- <div class="work">
                     <img src="img/logo.png" alt="">
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>this is description</p>
                         <a href=""><i class="fa fa-external-link"></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </div> -->
+    </div> 
+
 <!-- contact -->
     <div id="contact">
         <div class="container">
@@ -165,22 +181,25 @@
                         <a href="https://www.instagram.com/its_s_guptaji/"><i class="fa fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-github"></i></a>
+                        <a href="https://leetcode.com/Satyamg777/"><img src="./img/leetcode.png" alt=""></a>                    
                     </div>
                     <!-- <a href="#" download></a> -->
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet" action="">
                         <input type="text" name="Name" placeholder="Enter your name" required>
                         <input type="email" name="email" placeholder="Enter your email" required>
                         <textarea name="Massage" rows="6" placeholder="Your massage"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
     </div>
 
         <!----------------JavaScript ---------------->
+        <script src="script.js"></script>
 
 <script>
         var tabLinks = document.getElementsByClassName("tab-links");
@@ -210,6 +229,23 @@
             menubar.style.right = "-200px";
         }
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxpGM6OzbpBoXfzekNSUJMCfSGU6b2mXk7yGgxT_ZCGS9YfKGz-ayR-KKW3Ilo4vnzPug/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Massage Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
 

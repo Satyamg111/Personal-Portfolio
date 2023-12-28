@@ -9,25 +9,30 @@ html{
 }
 
 body{
-    background-color: #080808;
+    /* background-color: #0e0b0b; */
     /* background-image: url("img/back4.jpg"); */
-    background-size: cover;
+    background-image: url("img/bg.jpg");
+    /* background-size: cover;  */
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 span{
     color: #ff004f;
 }
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url("img/satyam--.png");
-    background-size: cover;
-    background-position: center; 
-    border-radius: 30%;
-}
 .container{
     padding: 10px 2%;
+}
+#navigation {
+    position: fixed;
+    width: 100%;
+    /* background-color: #ff004f; */
+    z-index: 999;
+    transition: all 0.2s ease 0s;
+}
+.sticky{
+    background-color: #ff004f;
+    padding: 2px 0;
 }
 nav {
     /* background-color: rgba(252, 197, 214, 0.329); */
@@ -38,7 +43,7 @@ nav {
     padding: 0 0;
 }
 .logo{
-    width:100px;
+    width:70px;
 }
 nav ul li{
     display: inline-block;
@@ -68,18 +73,83 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+#header{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("img/satyam--.png"); */
+    /* background-image: url("img/satyam.jpg"); */
+    background-size: cover;
+    background-position: center; 
+    border-radius: 30%;
+    padding-top: 60px;
+}
+.header-main {
+    display: flex;
+    width: 100%;
+}
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
+    margin-left: 5%;
     font-size: 30px;
+    width: 100%;
 }
 .header-text h1{
-    width: 70%;
-    font-size: 60px;
+    /* width: 60%; */
+    font-size: 80px;
 }
-
+.header-img {
+    width: 70%;
+}
+.header-img img{
+    width: 100%;
+    border-radius: 0 300px 400px / 0 0 250px 150px;
+    filter: drop-shadow(5px 2px 5px rgb(101, 241, 241));
+    transition: .5s;
+}
+.header-img img:hover{
+    /* filter: drop-shadow(5px 5px 20px rgb(101, 241, 241)); */
+    filter: drop-shadow(5px 10px 10px rgb(101, 241, 241));
+    transform: translateY(-10px);
+}
+#spin {
+    color: #ff004f;
+    position: relative;
+}
+.header-text .spin {
+    color: #fff;
+    /* font-family: monospace; */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 5s steps(10, end) infinite,
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    /* from { width: 0 }
+    to { width: 100% } */
+    0% {width:0%;}
+    10% {width: 15%;}
+    25% {width: 30%;}
+    40% {width: 45%;}
+    65% {width: 30%;}
+    80% {width: 15%;}
+    100% {width: 0%;}
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+/* About  */
 #about{
     padding: 80px 0;
     color: #ababab;
+    background-color: #262626;
 }
 .row{
     display: flex;
@@ -129,11 +199,11 @@ nav ul li a:hover::after {
 }
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
-
+    margin: 8px 0;
 }
 .tab-contents ul li span{
-    color: #b54769;
+    /* color: #b54769; */
+    color: #ff004f;
     font-size: 18px;
 }
 .tab-contents{
@@ -150,14 +220,35 @@ nav ul li a:hover::after {
 }
 .tab-contents .skill-icons img{
     width: 50px;
-    border: 1px solid #ff004f;
-    border-radius: 20px;
+    /* border: 1px solid #ff004f; */
+    border-radius: 50px;
     border-spacing: 50px;
     margin-right: 20px;
-    transition: transform 1s;
+    transition: box-shadow .5s;
 }
 .tab-contents .skill-icons img:hover{
-    transform: rotateY(360deg);
+    /* transform: rotateY(360deg); */
+    box-shadow: #5de0c0 1px 1px 10px 2px;
+}
+.about-cv{
+    display: inline-block;
+    margin-top: 15px;
+}
+.about-cv a{
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: #ff004f;
+    border: 2px solid #ff004f;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.about-cv a:hover{
+    color: #ff004f;
+    background-color: #fff;
+    border: 2px solid #ff004f;
 }
 
 /* --------------services---------------- */
@@ -195,7 +286,9 @@ nav ul li a:hover::after {
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    /* background: #ff004f; */
+    background: #5de0c0;
+    color: #0e0b0b;
     transform: translateY(-10px);
 }
 
@@ -211,6 +304,7 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 .work{
+    /* width: 50%; */
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -224,6 +318,7 @@ nav ul li a:hover::after {
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    /* background: linear-gradient(rgba(0,0,0,0.6),#5de0c0); */
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -245,6 +340,7 @@ nav ul li a:hover::after {
 .layer a{
     margin-top: 20px;
     color: #ff004f;
+    /* color: #5de0c0; */
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -259,7 +355,8 @@ nav ul li a:hover::after {
 .work:hover .layer{
     height: 100%;
 }
-/* <-------Coontact---------> */
+
+/* <-------Contact---------> */
 #contact{
     margin-top: 50px;
 }
@@ -290,6 +387,9 @@ nav ul li a:hover::after {
 .social-media{
     margin-top: 30px;
 }
+.social-media img{
+    width: 30px;
+}
 .social-media a{
     text-decoration: none;
     font-size: 30px;
@@ -302,6 +402,7 @@ nav ul li a:hover::after {
     color: #ff004f;
     transform: translateY(-5px);
 }
+
 .btn{
     display: block;
     margin: 50px auto;
@@ -313,14 +414,14 @@ nav ul li a:hover::after {
     color: white;
     /* transition: background 0.5s; */
     /* transition: border 0.5s; */
-    transition: box-shadow 0.3s;
+    transition: 0.3s;
 }
 .btn.btn2 {
     display: inline-block;
     background: #ff004f;
 }
 .btn:hover{
-    box-shadow: 0 0 40px #ff004f;
+    box-shadow: 0 0px 20px 2px #ff004f;
     /* border: 1px  solid rgb(201, 199, 199); */
     /* background: #ce0545; */
 }
@@ -438,4 +539,9 @@ form .btn2{
         display: block;
         margin: 0 auto;
     }
+}
+#msg {
+    display: block;
+    margin-top: -20px;
+    color: rgb(210, 255, 143);
 }
