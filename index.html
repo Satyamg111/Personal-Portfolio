@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
 <body>
+    <!----------------- Navigation-bar ----------------->
     <div id="navigation" class="">
         <div class="container">
             <nav class="navbar">
@@ -17,7 +19,7 @@
                     <li><i class="fa fa-home"></i><a href="#header" onclick="closemenu()">Home</a></li>
                     <li><i class="fa fa-id-badge"></i><a href="#about" onclick="closemenu()">About</a></li>
                     <li><i class="fa fa-handshake-o"></i><a href="#services" onclick="closemenu()">Services</a></li>
-                    <li><a href="#portfolio" onclick="closemenu()">Projects </a></li>
+                    <li><i class="fa fa-code"></i></i><a href="#portfolio" onclick="closemenu()">Projects </a></li>
                     <li><i class="fa fa-user-o"></i><a href="#contact" onclick="closemenu()">Contact</a></li>
                     <i class="fa fa-remove nav-oc" onclick="closemenu()"></i>
                 </ul>
@@ -25,6 +27,7 @@
             </nav>
         </div>
     </div>
+    <!--------------------------- Header ------------------------->
     <div id="header">
         <div class="container">
             <div class="header-main">
@@ -32,7 +35,8 @@
                     <p>Hello , I am </p>
                     <h1>Satyam<span> Gupta</span></h1>
                     <!-- <p>I'm a student at NIT Warangal.</p> -->
-                    <p class="spin">I'm a <span id="spin">Programer</span></p>
+                    <p>I'm a </p>
+                    <p class="spin"><span id="spin"></span></p>
                 </div>
                 <div class="header-img">
                     <img class="back-img" src="./img/satyam-bg-.png" alt="">
@@ -41,7 +45,7 @@
         </div>
     </div>
 
-<!-- About -->
+<!---------------------- About ------------------------->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -88,9 +92,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        <div class="about-cv">
-                            <a href="./Satyam_resume.pdf" target="_blank" download="">Download CV</a>
-                        </div>
                     </div>
                     <!-- <div class="tab-contents" id="experience">
                         <ul>
@@ -105,6 +106,9 @@
                             <li><span>IPS Academy, Indore</span><br>Bachelor's Of Computer Application (BCA)<br>Percentage: 72.9 (2018-21)</li>
                             <li><span>Board Of Secondary Education, Bhopal</span><br>PCM<br>Percentage: 80.4 (2017-18)</li>
                         </ul>
+                    </div>
+                    <div class="about-cv">
+                        <a href="./Satyam_resume.pdf" target="_blank" download="">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +139,7 @@
             </div>
         </div>
     </div>
-
+    <!------------------------ Projects ---------------------->
     <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
@@ -150,7 +154,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="img/logo.png" alt="">
+                    <img src="img/cpp.png" alt="">
                     <div class="layer">
                         <h3>Store Management</h3>
                         <p>Developed a user-friendly Grocery Store Management System in C++, incorporating Berkeley DB for efficient data storage.</p>
@@ -169,12 +173,13 @@
         </div>
     </div> 
 
-<!-- contact -->
+<!----------------- Contact ---------------------->
     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa fa-user"></i> Satyam Gupta</p>
                     <a href="mailto:satyam97102@gmail.com"><p><i class="fa fa-envelope"></i> satyam97102@gmail.com</p></a>
                     <a href="tel:7610397102"><p><i class="fa fa-phone"></i> +91 7610397102</p></a>
                     <div class="social-media">
@@ -197,57 +202,22 @@
             </div>
         </div>
     </div>
-
-        <!----------------JavaScript ---------------->
-        <script src="script.js"></script>
-
-<script>
-        var tabLinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
-
-        function openTab(tabName) {
-            for (tabLink of tabLinks) {
-                tabLink.classList.remove("active-link")
-            }
-            for (tabContent of tabContents) {
-                tabContent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabName).classList.add("active-tab");
-        }
-
-        
-</script>
-<script>
-    var menubar = document.getElementById("sidemenu");
-
-        function openmenu() {
-            menubar.style.right = "0";
-        }
-
-        function closemenu() {
-            menubar.style.right = "-200px";
-        }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxpGM6OzbpBoXfzekNSUJMCfSGU6b2mXk7yGgxT_ZCGS9YfKGz-ayR-KKW3Ilo4vnzPug/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg')
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Massage Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    <!---------- Footer ------------------>
+    <div id="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/its_s_guptaji/"><i class="fa fa-instagram"></i></a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-linkedin"></i></a>
+                <span>|</span>
+                <a href="https://www.linkedin.com/in/satyam-gupta-4a513720b/"><i class="fa fa-github"></i></a>
+                <span>|</span>
+                <a href="mailto:satyam97102@gmail.com"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
 </body>
+<!----------------JavaScript ---------------->
+<script src="script.js"></script>
 </html>
 
-
-<!-- continue from 01:40:00 -->

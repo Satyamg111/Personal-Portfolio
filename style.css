@@ -9,10 +9,8 @@ html{
 }
 
 body{
-    /* background-color: #0e0b0b; */
-    /* background-image: url("img/back4.jpg"); */
     background-image: url("img/bg.jpg");
-    /* background-size: cover;  */
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
@@ -26,7 +24,6 @@ span{
 #navigation {
     position: fixed;
     width: 100%;
-    /* background-color: #ff004f; */
     z-index: 999;
     transition: all 0.2s ease 0s;
 }
@@ -38,17 +35,18 @@ nav {
     /* background-color: rgba(252, 197, 214, 0.329); */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 0;
 }
 .logo{
-    width:70px;
+    width:60px;
 }
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 5px #0e0b0b;
 }
 nav ul li a{
     color: #fff;
@@ -57,8 +55,8 @@ nav ul li a{
     position:relative;
 }
 nav ul li .fa{
-    font-size: 24px;
-    padding: 0 5px;
+    font-size: 22px;
+    padding: 0 3px;
 }
 nav ul li a::after {
     content: '';
@@ -88,7 +86,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .header-text{
-    margin-top: 10%;
+    margin-top: 12%;
     margin-left: 5%;
     font-size: 30px;
     width: 100%;
@@ -111,39 +109,49 @@ nav ul li a:hover::after {
     filter: drop-shadow(5px 10px 10px rgb(101, 241, 241));
     transform: translateY(-10px);
 }
+.header-text p {
+    display: inline-flex;
+    padding: 0 5px;
+}
 #spin {
     color: #ff004f;
     position: relative;
 }
+#spin:after{
+    content:"";
+    animation: spin 20s step-end infinite;
+}
 .header-text .spin {
-    color: #fff;
-    /* font-family: monospace; */
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: .15em solid #ff004f;
+    white-space: nowrap;
+    letter-spacing: .15em; 
     animation: 
-      typing 5s steps(10, end) infinite,
+      typing 5s steps(5) infinite,
       blink-caret .75s step-end infinite;
+}
+  @keyframes spin {
+    0%{content: "Programer";}
+    25%{content: "Developer";}
+    50%{content:"Coder";}
+    75%{content:"Designer";}
   }
-  
-  /* The typing effect */
-  @keyframes typing {
+
+@keyframes typing {
     /* from { width: 0 }
     to { width: 100% } */
     0% {width:0%;}
-    10% {width: 15%;}
-    25% {width: 30%;}
-    40% {width: 45%;}
-    65% {width: 30%;}
-    80% {width: 15%;}
+    10% {width: 10%;}
+    25% {width: 20%;}
+    40% {width: 30%;}
+    65% {width: 20%;}
+    80% {width: 10%;}
     100% {width: 0%;}
   }
   
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: #ff004f }
   }
 /* About  */
 #about{
@@ -253,8 +261,8 @@ nav ul li a:hover::after {
 
 /* --------------services---------------- */
 
-#servicess{
-    padding: 30px 0;
+#services{
+    padding: 50px 0;
 }
 .services-list{
     display: grid;
@@ -296,6 +304,7 @@ nav ul li a:hover::after {
 
 #portfolio{
     padding: 50px 0;
+    background-color: #0e0b0b;
 }
 .work-list{
     display: grid;
@@ -458,26 +467,29 @@ form .btn2{
 }
 @media only screen and (max-width:600px){
     #header{
-        background-image: url("img/satyam--.png");
         background-size: 120%, auto, contain;
         background-repeat: no-repeat;
         background-position: -50px 50px;
         height: fit-content;
     }
     .header-text{
-        margin-top: 30%;
+        margin-top: 10%;
         margin-bottom: auto;
         font-size: 16px;
     }
     .header-text h1{
         font-size: 30px;
     }
+    nav {
+        justify-content: space-between;
+    }
     nav  .nav-oc {
         display: block;
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        /* background: #ff004f; */
+        background-color: #0e0b0b;
         position: fixed;
         top: 0;
         right: -200px;
@@ -538,10 +550,29 @@ form .btn2{
         /* float: right; */
         display: block;
         margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 10px 30px ;
     }
 }
 #msg {
     display: block;
     margin-top: -20px;
     color: rgb(210, 255, 143);
+}
+#footer{
+    background-color: #0e0b0b;
+}
+#footer .social-icons {
+    font-size: 22px;
+    text-align: center;
+}
+.social-icons a{
+    display: inline-block;
+    color: #fff;
+    transform: color 0.5s;
+    margin: 0 10px;
+}
+
+.social-icons a:hover{
+    color: #5de0c0;
 }
