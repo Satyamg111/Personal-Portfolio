@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-image: url("img/bg.jpg");
+    background-image: url("/img/bg.jpg");
     opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -236,7 +236,7 @@ nav ul li a:hover::after {
 }
 .tab-contents .skill-icons img:hover{
     /* transform: rotateY(360deg); */
-    box-shadow: #5de0c0 1px 1px 10px 2px;
+    box-shadow: #ff004f 1px 1px 10px 2px;
 }
 .about-cv{
     display: inline-block;
@@ -295,7 +295,7 @@ nav ul li a:hover::after {
 }
 .services-list div:hover{
     /* background: #ff004f; */
-    background: #5de0c0;
+    background: #ff004f;
     color: #0e0b0b;
     transform: translateY(-10px);
 }
@@ -574,5 +574,5 @@ form .btn2{
 }
 
 .social-icons a:hover{
-    color: #5de0c0;
+    color: #ff004f;
 }
