@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-image: url("img/bg.jpg");
+    background-image: url("./img/bg.jpg");
     opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
