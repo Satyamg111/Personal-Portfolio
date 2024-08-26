@@ -9,7 +9,8 @@ html{
 }
 
 body{
-    background-image: url("./img/bg.jpg");
+    /* background-image: url("./img/bg.jpg"); */
+    background-color: #0e0b0b;
     opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -262,6 +263,7 @@ nav ul li a:hover::after {
 /* --------------services---------------- */
 
 #services{
+    background-color: #0e0b0b;
     padding: 50px 0;
 }
 .services-list{
@@ -304,7 +306,7 @@ nav ul li a:hover::after {
 
 #portfolio{
     padding: 50px 0;
-    background-color: #0e0b0b;
+    background-color: #262626;
 }
 .work-list{
     display: grid;
@@ -367,6 +369,7 @@ nav ul li a:hover::after {
 
 /* <-------Contact---------> */
 #contact{
+    background-color: #0e0b0b;
     margin-top: 50px;
 }
 .contact-left{
