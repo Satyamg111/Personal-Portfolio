@@ -241,7 +241,7 @@ nav ul li a:hover::after {
 }
 .about-cv{
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .about-cv a{
     font-size: 18px;
